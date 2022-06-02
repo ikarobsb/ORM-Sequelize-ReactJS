@@ -4,6 +4,7 @@ import Cabecalho from "../Cabecalho/Cabecalho.js";
 import MenuHorizontal from "../MenuHorizontal/MenuHorizontal.js";
 import AreaDados from "../AreaDados/AreaDados.js";
 import Rodape from "../Rodape/Rodape.js";
+import Cards from "../Cards/Cards.js";
 
 function Geral() {
   return (
@@ -11,6 +12,7 @@ function Geral() {
       <Cabecalho/>
       <MenuHorizontal/>
       <AreaDados/>
+      <Cards />
       <Rodape/>
     </div>
   );

@@ -3,7 +3,7 @@ module.exports = {
     dialect: 'mysql',
     username: 'root',
     password: '21111987Ipa',
-    database: 'webiiorm',
+    database: 'solar_limp',
     define: {
         timestamps:true,
         underscored: true,

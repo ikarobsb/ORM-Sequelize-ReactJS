@@ -1,17 +1,21 @@
 import React from "react";
 import Geral from "./components/Geral/Geral.js"
 import { Route, Routes } from "react-router-dom";
-import Categorias from "./components/Categorias/Categorias.js" 
-import Departamentos from "./components/Departamentos/Departamentos.js"
-import Times from "./components/Times/Times.js"
+
+
+import Usuarios from "./components/Usuario/Usuarios.js"
+import Distribuidoras from "./components/Distribuidoras/Distribuidoras.js"
+import AreaConcessao from "./components/AreaConcessao/AreaConcessao.js"
 
 function Routers(){
     return(
         <Routes>
             <Route exact path="/" element={<Geral/>}/>
-            <Route exact path="/categorias" element={<Categorias/>}/>
-            <Route exact path="/departamentos" element={<Departamentos/>}/>
-            <Route exact path="/times" element={<Times/>}/> 
+            
+          
+            <Route exact path="/usuarios" element={<Usuarios/>}/>
+            <Route exact path="/distribuidoras" element={<Distribuidoras/>}/>
+            <Route exact path="/areaconcessao" element={<AreaConcessao/>}/>
         </Routes>
     )
 }

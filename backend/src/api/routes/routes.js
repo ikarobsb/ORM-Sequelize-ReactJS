@@ -2,30 +2,35 @@ const express = require('express')
 const routes = express.Router()
 
 const controllers = require('../controllers/indexControllers.js')
-const categoriasControllers = require('../controllers/categoriasControllers.js')
-const departamentosControllers = require('../controllers/departamentosControllers.js')
-const timesControllers = require('../controllers/timesControllers.js')
+const usuariosControllers = require('../controllers/usuariosControllers.js')
+const distribuidorasControllers = require('../controllers/distribuidorasControllers.js')
+const areaDeConcessaoControllers = require('../controllers/areaDeConcessaoControllers.js')
 
 // rota raiz
 routes.get('/', controllers.indexRaiz)
 
-// rotas de categorias
-routes.get('/categorias', categoriasControllers.index)
-routes.post('/categorias', categoriasControllers.store)
-routes.put('/categorias/:codigo_id', categoriasControllers.update)
-routes.delete('/categorias/:codigo_id', categoriasControllers.delete)
-routes.get('/categorias/:codigo_id', categoriasControllers.indexId)
+// rota usuario
+routes.get('/usuarios', usuariosControllers.index)
+routes.post('/usuarios', usuariosControllers.store)
+routes.put('/usuarios/:id', usuariosControllers.update)
+routes.delete('/usuarios/:id', usuariosControllers.delete)
+routes.get('/usuarios/:id', usuariosControllers.indexId)
 
-// rotas de departamentos
-routes.get('/departamentos', departamentosControllers.index)
-routes.post('/departamentos', departamentosControllers.store)
-routes.put('/departamentos/:codigo_id', departamentosControllers.update)
+// rota distribuidora
+routes.get('/distribuidoras', distribuidorasControllers.index)
+routes.post('/distribuidoras', distribuidorasControllers.store)
+routes.put('/distribuidoras/:id', distribuidorasControllers.update)
+routes.delete('/distribuidoras/:id', distribuidorasControllers.delete)
+routes.get('/distribuidoras/:id', distribuidorasControllers.indexId)
 
-// rotas de times
-routes.get('/times', timesControllers.index)
-routes.post('/times', timesControllers.store)
-routes.put('/times/:codigo_id', timesControllers.update)
-routes.delete('/times/:codigo_id', timesControllers.delete)
+// rota area de concessao
+routes.get('/areaconcessao', areaDeConcessaoControllers.index)
+routes.post('/areaconcessao', areaDeConcessaoControllers.store)
+routes.put('/areaconcessao/:id', areaDeConcessaoControllers.update)
+routes.delete('/areaconcessao/:id', areaDeConcessaoControllers.delete)
+routes.get('/areaconcessao/:id', areaDeConcessaoControllers.indexId)
+
+
 
 module.exports = routes
 

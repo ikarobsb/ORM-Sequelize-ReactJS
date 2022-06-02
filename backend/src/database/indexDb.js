@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize')
 const dbConfig = require('../config/database.js')
 
-const categorias = require('../api/models/categoriasModels')
-const departamentos = require('../api/models/departamentosModels')
-const times = require('../api/models/timesModels')
+// Importando Models
+const usuarios = require('../api/models/usuariosModels')
+const distribuidoras = require('../api/models/distribuidorasModels')
+const areaconcessao = require('../api/models/areaDeConcessaoModels')
 
 
 const conexao = new Sequelize(dbConfig)
@@ -15,8 +16,9 @@ try{
     console.log('Falha na conexão Mysql!!!')
 }
 
-categorias.init(conexao)
-departamentos.init(conexao)
-times.init(conexao)
+usuarios.init(conexao)
+distribuidoras.init(conexao)
+areaconcessao.init(conexao)
+
 
 module.exports = conexao;
